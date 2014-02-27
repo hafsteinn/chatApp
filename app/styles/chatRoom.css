@@ -1,0 +1,127 @@
+#topic
+{
+	margin-left:90px;
+}
+#messageBox
+{
+	float:left;
+	height:300px;
+	width:700px;
+}
+
+#activeUsers
+{
+	float:left;
+	margin-left:20px;
+	overflow-y: scroll;
+	height:300px;
+	width:250px;
+}
+
+#conversation
+{
+	position:absolute;
+	margin-left:80px;
+	margin-top:40px;
+	width:1000px;
+	height:350px;
+	overflow: hidden;
+}
+
+#enterMessageBar
+{
+	overflow: hidden;
+	position:absolute;
+	bottom:0;
+	width:700px;
+}
+
+[scroll-glue]
+{
+	overflow-y: scroll;
+}
+
+#privateMsgPanel
+{
+	border-top-style: dashed;
+	border-bottom-style:dashed;
+	border-color:gray;
+	display:none;
+	position:fixed;
+	left:300px;
+	width:700px;
+	height:300px;
+	z-index: 100;
+}
+
+#privateMsgButton
+{
+	margin-top:10px;
+}
+
+#privateEnvelope
+{
+	display:none;
+	width:20px;
+	z-index: 100;
+}
+
+#privateMessage
+{
+	border-top-style: dashed;
+	border-bottom-style:dashed;
+	border-color:gray;
+	display:none;
+	position:fixed;
+	left:300px;
+	width:700px;
+	height:300px;
+	z-index: 100;
+}
+
+#settings
+{
+	border-top-style: dashed;
+	border-bottom-style:dashed;
+	border-color:gray;
+	display:none;
+	position:relative;
+	margin:auto;
+	width:200px;
+	height:200px;
+	z-index: 100;
+}
+
+#youWereKicked
+{
+	display:none;
+	position:relative;
+	margin:auto;
+	top:150px;
+	width:310px;
+	z-index:1000;
+}
+
+#youWereKicked a
+{
+	left:50px;
+	position:relative;
+	margin:auto;
+}
+
+#youWereBanned
+{
+	display:none;
+	position:relative;
+	margin:auto;
+	top:150px;
+	width:310px;
+	z-index:1000;
+}
+
+#youWereBanned a
+{
+	left:50px;
+	position:relative;
+	margin:auto;
+}

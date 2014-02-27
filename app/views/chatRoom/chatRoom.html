@@ -1,0 +1,78 @@
+
+<section class="inputNick" ng-controller="chatRoomCtrl" >
+
+	<section id="topic">
+		<h4 class="text-muted">{{topic}}</h4>
+		<section id="incomingPrivateMessage">
+				<span class="glyphicon glyphicon-envelope" ng-click="showPrivateMessage()" id="privateEnvelope"></span>
+		</section>
+	</section>
+
+
+
+<section id="conversation">
+	<section class="list-group" id="messageBox" scroll-glue>
+		<a class="list-group-item" ng-repeat="message in messages">{{message.message}}
+			<span class="badge">{{message.nick}}</span>
+		</a>
+	</section>
+
+	<section id="activeUsers">
+		<section class="list-group">
+			<a class="list-group-item" ng-repeat="user in users" >{{user}}
+				<span class="badge">
+					<span class="glyphicon glyphicon-wrench" ng-click="settings(user)"></span>
+				</span>
+				<span class="badge">
+					<span class="glyphicon glyphicon-envelope" ng-click="showPrivateMessagePanel(user)"></span>
+				</span>
+			</a>
+		</section>
+	</section>
+
+	<section id="enterMessageBar">
+	  <form ng-submit="sendMessage()">
+	      <input type="text" class="form-control" placeholder="..." ng-model="newMessage" required>
+	  </form>
+	</section>
+</section>
+
+
+	<section id="privateMsgPanel">
+		<h4 class="text-muted">To: {{sendPrivateTo}}</h4>
+		<textarea rows="10" cols="112" ng-model="privateMsgText"></textarea>
+		<section>
+			<button id="privateMsgButton" type="button" class="btn btn-default" ng-click="privateMsg(sendPrivateTo,privateMsgText)">Send</button>
+			<button id="privateMsgButton" type="button" class="btn btn-default" ng-click="closeMsg()">close</button>
+		</section>
+	</section>
+
+	<section id="privateMessage">
+		<h4 class="text-muted">From: {{sendPrivateFrom}}</h4>
+		<textarea rows="10" cols="112" placeholder="{{privateMessage}}" ng-model="privateMsgReply"></textarea>
+			<section>
+				<button id="privateMsgButton" type="button" class="btn btn-default" ng-click="privateMsg(sendPrivateFrom,privateMsgReply)">Reply</button>
+				<button id="privateMsgButton" type="button" class="btn btn-default" ng-click="closeMsg()">close</button>
+			</section>
+	</section>
+
+	<section id="settings">
+		<h4 class="text-muted">Settings</h4>
+			<section>
+				<button id="kickButton" type="button" class="btn btn-default" ng-click="kickUser(user)">Kick User</button>
+				<button id="banButton" type="button" class="btn btn-default" ng-click="banUser(user)">Ban User</button>
+				<button id="CloseSettingsButton" type="button" class="btn btn-default" ng-click="closeSettings()">close</button>
+			</section>
+	</section>
+
+	<div class="alert alert-danger" id="youWereKicked">
+		You have been kicked out of the chatroom.
+		<a href="#/" class="alert-link">Click here to log in again.</a>
+	</div>
+
+	<div class="alert alert-danger" id="youWereBanned">
+		You have been banned from this chatroom.
+		<a href="#/" class="alert-link">Click here to log in again.</a>
+	</div>
+
+</section>

@@ -1,0 +1,22 @@
+
+#inputNick
+{
+	top:50%;
+	width:200px;
+    margin: 0 auto;
+}
+
+
+#nickInputContainer
+{
+	position:relative;
+	bottom:-150px;
+	width: 50%;
+    margin: 0 auto;
+}
+
+#header
+{
+	width:100px;
+    margin: 0 auto;
+}

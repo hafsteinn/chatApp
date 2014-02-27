@@ -1,0 +1,43 @@
+.rooms
+{
+	position: absolute;
+	margin-left:200px;
+	width:800px;
+	height:500px;
+}
+#activeRooms
+{
+	float:left;
+	overflow: scroll;
+	overflow-x:hidden;
+	height:400px;
+	width:300px;
+	position:absolute;
+	bottom:0;
+}
+
+#createNewRoom
+{
+	float:right;
+	height:400px;
+	width:300px;
+	position:relative;
+	bottom:-75px;
+}
+
+#headerLeft
+{
+	position:absolute;
+}
+
+#headerRight
+{
+	right:0;
+	position:absolute;
+}
+
+#topicInput
+{
+	margin-top:10px;
+}
+

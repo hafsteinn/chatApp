@@ -1,0 +1,32 @@
+
+
+<section class="rooms" ng-controller="roomsCtrl" >
+
+	<section id="headerLeft">
+			<h3 class="text-muted">Join.</h3>
+	</section>
+
+	<section id="headerRight">
+		<h3 class="text-muted">Create.</h3>
+	</section>
+
+	<section class="list-group" id="activeRooms">
+		<a href='#/rooms/{{key}}' class="list-group-item" ng-repeat="(key,val) in rooms">{{key}}
+			<span class="badge">fun</span>
+		</a>
+	</section>
+
+
+	<section id="createNewRoom">
+		<form>
+			<section class="input-group">
+				<input type="text" class="form-control" placeholder="Name of room" ng-model="nameOfRoom">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" ng-click="createRoom()">Go!</button>
+					</span>
+			</section>
+			<input id="topicInput" type="text" class="form-control" placeholder="topic" ng-model="topic">
+		</form>
+	</section>
+	
+</section>
